@@ -63,8 +63,8 @@ const Report = (props) => {
         >
         <div className="inline">
         <div className="box">
-        <Link to={`/axel/${id}`}>
-            <img className="bodypart" src={axel}/>
+        <Link to={`/head/${id}`}>
+            <img className="bodypart" src={head}/>
         </Link>
         </div>
         <div className="box">
@@ -73,23 +73,8 @@ const Report = (props) => {
         </Link>
         </div>
         <div className="box">
-        <Link to={`/foot/${id}`}>
-            <img className="bodypart" src={foot}/>
-        </Link>
-        </div>
-        <div className="box">
-        <Link to={`/hand/${id}`}>
-            <img className="bodypart" src={hand}/>
-        </Link>
-        </div>
-        <div className="box">
-        <Link to={`/leg/${id}`}>
-            <img className="bodypart" src={leg}/>
-        </Link>
-        </div>
-        <div className="box">
-        <Link to={`/head/${id}`}>
-            <img className="bodypart" src={head}/>
+        <Link to={`/axel/${id}`}>
+            <img className="bodypart" src={axel}/>
         </Link>
         </div>
         <div className="box">
@@ -102,6 +87,21 @@ const Report = (props) => {
             <img className="bodypart" src={back}/>
         </Link>
         </div>
+        <div className="box">
+        <Link to={`/hands/${id}`}>
+            <img className="bodypart" src={hand}/>
+        </Link>
+        </div>
+        <div className="box">
+        <Link to={`/leg/${id}`}>
+            <img className="bodypart" src={leg}/>
+        </Link>
+        </div>
+        <div className="box">
+        <Link to={`/foot/${id}`}>
+            <img className="bodypart" src={foot}/>
+        </Link>
+        </div> 
         </div>
         </motion.div>
     );

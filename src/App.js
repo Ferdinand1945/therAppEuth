@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Articles from './components/Articles';
 import Article from './components/Article';
 import Report from './components/Report';
+import Hands from './components/bodyparts/Hands';
 import { createBrowserHistory } from "history";
 import {AnimatePresence} from 'framer-motion';
 
@@ -26,6 +27,9 @@ function App({articles}) {
       </Route>
       <Route path="/report">
         <Report/>
+      </Route>
+      <Route path="/hands">
+        <Hands/>
       </Route>
       <Route path="/article/:id">
         <Article articles={articles}/>
