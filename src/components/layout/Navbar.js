@@ -14,9 +14,11 @@ const Navbar = (props) => {
         <motion.div className="nav" variants={navVariant} initial="hidden" animate="visible">
             <ul>
                 <li><Link to="/">Home</Link></li>
+                <li><Link to="/patients">Patients</Link></li>
                 <li><Link to="/report">Report</Link></li>
                 <li><Link to="/articles">Articles</Link></li>
                 <li><Link to="/stats">Stats</Link></li>
+                
                 
             </ul>
             

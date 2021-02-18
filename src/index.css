@@ -29,6 +29,57 @@ button{
   cursor: pointer;
   opacity: 0.7;
 }
+.accordion-wrapper  + * {
+  margin-top: 0.5em;
+}
+
+.accordion-item {
+overflow: hidden;
+transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+height: auto;
+max-height: 9999px;
+}
+
+.accordion-item.collapsed {
+max-height: 0;
+transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion-title {
+font-weight: 600;
+cursor: pointer;
+color: #fff;
+padding: 0.5em 1.5em;
+border: solid 1px #ccc;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.accordion-title::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid currentColor;
+}
+
+.accordion-title:hover,
+.accordion-title.open {
+  color: b1b2b3;
+}
+
+.accordion-title.open::after {
+    content: "";
+    border-top: 0;
+    border-bottom: 5px solid;
+  }
+
+
+.accordion-content {
+padding: 1em 1.5em;
+}
 .container{
   max-width: 300px;
   margin: 100px auto 40px;
@@ -216,4 +267,9 @@ li span.active::before{
 .box:hover {
   border-radius:50%;
   box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+}
+.patients {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #bbb;
 }

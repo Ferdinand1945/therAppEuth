@@ -2,11 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import {Router, Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
-import Navbar from './components/Navbar'; 
+import Navbar from './components/layout/Navbar'; 
 import Articles from './components/Articles';
 import Article from './components/Article';
 import Report from './components/Report';
 import Hands from './components/bodyparts/Hands';
+import Patients from './components/Patients';
+import Stats from './components/Stats';
 import { createBrowserHistory } from "history";
 import {AnimatePresence} from 'framer-motion';
 
@@ -33,6 +35,12 @@ function App({articles}) {
       </Route>
       <Route path="/article/:id">
         <Article articles={articles}/>
+      </Route>
+      <Route path="/patients">
+        <Patients/>
+      </Route>
+      <Route path="/stats/:id">
+        <Stats/>
       </Route>
     </Switch>
     </Router>
